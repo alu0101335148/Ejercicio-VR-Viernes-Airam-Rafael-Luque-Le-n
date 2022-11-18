@@ -18,7 +18,7 @@ public class TPScript : MonoBehaviour
 
     void FixedUpdate() {
       if (Input.GetKey(KeyCode.T)) {
-        transform.position += new Vector3(0, 0, 10);
+        transform.position += new Vector3(0, 10, 10);
       }
     }
 }

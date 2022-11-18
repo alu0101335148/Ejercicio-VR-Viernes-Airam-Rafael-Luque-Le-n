@@ -107,3 +107,24 @@ public class AttackScript : MonoBehaviour {
 ### Configurar el proyecto para funcionar con CardBoard. 
 
 ### Implementar una mecánica en la que el jugador al fijar la mirada sobre uno de los cofres, las arañas de color rojo se roten y las verdes salten.
+
+````csharp
+...
+    public void OnPointerEnter()
+    {
+      Debug.Log("Test");
+      GameObject[] redSpiders = GameObject.FindGameObjectsWithTag("RedSpider");
+      GameObject[] greemSpiders = GameObject.FindGameObjectsWithTag("GreenSpider");
+      foreach (GameObject redSpider in redSpiders) {
+        Rigidbody rb = redSpider.GetComponent<Rigidbody>();
+        Vector3 rotationSpeed = new Vector3(0, 100f, 0);
+        Quaternion rotation = Quaternion.Euler(rotationSpeed);
+        rb.MoveRotation(rb.rotation * rotation);
+      }
+      foreach (GameObject greenSpider in greemSpiders) {
+        Debug.Log("Doing something");
+        greenSpider.GetComponent<Rigidbody>().AddRelativeForce(0, 1000, 0);
+      }
+    }
+...
+```

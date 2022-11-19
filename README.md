@@ -29,6 +29,8 @@ public class TPScript : MonoBehaviour
 }
 ```
 
+![exercise_2](/img/2.gif)
+
 ### Crear un script que aumente las dimensiones de los huevos de las arañas cada vez que el monster colisione con el cofre. El cofre debe ser desplazado con física.
 
 MonsterController.cs
@@ -82,6 +84,8 @@ public class EggScaling : MonoBehaviour {
 }
 ```
 
+![exercise_3](/img/3.gif)
+
 ### Crear un script que al pasar a una distancia menor que una dada de las arañas, reste vida al monstruo.
 
 AttackScript.cs
@@ -104,11 +108,13 @@ public class AttackScript : MonoBehaviour {
 }
 ```
 
+![exercise_4](/img/4.gif)
+
 ### Configurar el proyecto para funcionar con CardBoard. 
 
 ### Implementar una mecánica en la que el jugador al fijar la mirada sobre uno de los cofres, las arañas de color rojo se roten y las verdes salten.
 
-````csharp
+```csharp
 ...
     public void OnPointerEnter()
     {
@@ -128,3 +134,5 @@ public class AttackScript : MonoBehaviour {
     }
 ...
 ```
+
+![exercise_5-6](/img/5-6.gif)
